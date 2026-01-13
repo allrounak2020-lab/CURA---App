@@ -7,7 +7,7 @@ from fpdf import FPDF
 # PASTE YOUR API KEY BELOW
 os.environ["GEMINI_API_KEY"] = "AIzaSyBPMOsT3zU8ZXjbK2_IRpmuJcSXJxOdLNg"
 genai.configure(api_key=os.environ["AIzaSyBPMOsT3zU8ZXjbK2_IRpmuJcSXJxOdLNg"])
-model = genai.GenerativeModel('gemini-1.5-flash')
+model = genai.GenerativeModel('gemini-1.5-flash-lates')
 
 st.set_page_config(page_title="CURA - AI Health", layout="centered")
 
