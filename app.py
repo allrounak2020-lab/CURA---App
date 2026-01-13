@@ -4,12 +4,10 @@ import os
 from fpdf import FPDF
 
 # --- CONFIG & AI SETUP ---
-# PASTE YOUR API KEY BELOW
-os.environ["GEMINI_API_KEY"] = "AIzaSyBPMOsT3zU8ZXjbK2_IRpmuJcSXJxOdLNg"
-genai.configure(api_key=os.environ["AIzaSyBPMOsT3zU8ZXjbK2_IRpmuJcSXJxOdLNg"])
+# --- CONFIG & AI SETUP ---
+GOOGLE_API_KEY = "AIzaSyBPMOsT3zU8ZXjbK2_IRpmuJcSXJxOdLNg" # Your actual key
+genai.configure(api_key=GOOGLE_API_KEY)
 model = genai.GenerativeModel('gemini-1.5-flash-lates')
-
-st.set_page_config(page_title="CURA - AI Health", layout="centered")
 
 if 'page' not in st.session_state:
     st.session_state.page = 'landing'
